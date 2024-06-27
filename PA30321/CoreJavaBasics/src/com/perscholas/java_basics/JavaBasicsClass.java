@@ -85,6 +85,12 @@ public class JavaBasicsClass {
 
         // Print q after casting y to double
         System.out.println("After casting y to double: q = " + q);
+
+        //7. Write a program that declares a named constant
+        //   and uses it in a calculation. Print the result.
+        final double pi =3.14, aNumber=10;
+        double sumPi = pi + aNumber;
+        System.out.println(sumPi);
     }
     }
 

@@ -91,6 +91,19 @@ public class JavaBasicsClass {
         final double pi =3.14, aNumber=10;
         double sumPi = pi + aNumber;
         System.out.println(sumPi);
+
+        //8. Write a program where you create three variables that represent products at a cafe.
+
+        //Create 3 variables that represents products at a cafe
+        double coffee=1.51, cappuccino=2.20, green_tea=3.35;
+
+        //Create 2 variables called subtotal and totalSale
+        double subtotal=0, totalSale=0;
+
+        subtotal = (coffee*3) + (cappuccino*4) + (green_tea*2);
+        final double SALES_TAX = 0.08;
+        totalSale = subtotal + (subtotal * SALES_TAX);
+        System.out.printf("Total sale amount is: %,.2f",totalSale);
     }
     }
 

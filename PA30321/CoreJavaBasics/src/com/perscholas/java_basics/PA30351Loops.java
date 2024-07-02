@@ -32,7 +32,7 @@ public class PA30351Loops {
     // Write a program that prompts the user to enter two positive integers,
     // and find their greatest common divisor (GCD).
     static void greatestCommonDivisor(){
-        int n1 = 0, n2 = 0, mod=0;
+        int n1 = 0, n2 = 0;
 
         //Ask user for a positive number
         System.out.print("enter a positive integer: ");
@@ -67,8 +67,22 @@ public class PA30351Loops {
         }
     }
 
+    static void PredictFutureTuition(){
+        final int currentYearTuition = 10000;
+        double tuition= currentYearTuition;
+        int years = 0;
+
+        while ( tuition <= (currentYearTuition * 2)){
+            tuition = tuition + (tuition *0.07);
+            System.out.println(tuition);
+            years++;
+        }
+        System.out.println("the tuition will be doubled in "+years+" years");
+    }
+
     public static void main(String[] args) {
         //multTable();
-        greatestCommonDivisor();
+        //greatestCommonDivisor();
+        PredictFutureTuition();
     }
 }

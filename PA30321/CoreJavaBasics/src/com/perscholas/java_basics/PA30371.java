@@ -1,6 +1,7 @@
 package com.perscholas.java_basics;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class PA30371 {
 
@@ -71,7 +72,64 @@ public class PA30371 {
     }
 
     static void task7(){
-        
+        int[] intArr;
+        intArr = new int[] {4, 2, 9, 13, 1};
+        int middle=0;
+
+        int arrlength = intArr.length;
+        if (arrlength % 2 != 0) {
+            middle = arrlength / 2;
+            for (int i=0; i<intArr.length;i++){
+                if (middle != i)
+                    System.out.println(intArr[i]);
+            }
+        }else{
+            System.out.println("No middle element for even arrays");
+        }
+    }
+
+    static void task8(){
+        String[] sourceArray={"red", "green", "blue", "yellow", "black"};
+        System.out.println(Arrays.toString(sourceArray));
+        int arrlength = sourceArray.length;
+        int middle = arrlength / 2;
+        String middleEl = sourceArray[middle];
+        String firstEl  = sourceArray[0];
+
+        sourceArray[0] = middleEl;
+        sourceArray[middle] = firstEl;
+        System.out.println(Arrays.toString(sourceArray));
+    }
+
+    static void task9(){
+        int[] arr = {4, 2, 9, 13, 1, 0};
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+        System.out.println(arr[0]);
+        System.out.println(arr[arr.length-1]);
+    }
+
+    //Create an array that includes an integer, 3 strings, and 1 double. Print the array
+    static void task10(){
+        Object[] arr = {42, "Hello", "World", "Java", 3.14};
+        System.out.println(Arrays.toString(arr));
+    }
+
+    //create a String array of favorite things based on the
+    //answer of the user
+    static void task11(){
+        //asks the user how many favorite things they have.
+        System.out.print("How many favorite things do you have? ");
+        Scanner input1 = new Scanner(System.in);
+        int n = input1.nextInt();
+        String[] favoriteThings = new String[n];
+
+        for (int i =0; i < favoriteThings.length;i++){
+            System.out.printf("Enter your number %d favorite thing: ",i+1);
+            Scanner input2 = new Scanner(System.in);
+            favoriteThings[i] = input2.nextLine();
+        }
+        System.out.println("Your favorites things to do: "+Arrays.toString(favoriteThings));
     }
 
     public static void main(String[] args) {
@@ -81,7 +139,10 @@ public class PA30371 {
         //task4();
         //task5();
         //task6();
-        task7();
-
+        //task7();
+        //task8();
+        //task9();
+        //task10();
+        task11();
     }
 }
